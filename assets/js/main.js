@@ -83,4 +83,17 @@ document.addEventListener("DOMContentLoaded", function () {
       var statsIo = new IntersectionObserver(
         function (entries) {
           entries.forEach(function (entry) {
-            if (ent
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              statsIo.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.4 }
+      );
+      counters.forEach(function (el) { statsIo.observe(el); });
+    } else {
+      counters.forEach(animateCounter);
+    }
+  }
+});
