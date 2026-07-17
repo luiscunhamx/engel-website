@@ -166,6 +166,22 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spa
 .foot .bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;padding-top:28px;font-size:0.8rem;color:var(--mineral);}
 @media(max-width:1000px){.faces{grid-template-columns:repeat(4,1fr);}.projects{grid-template-columns:1fr;}.stat-row{grid-template-columns:repeat(2,1fr);gap:40px 30px;}}
 @media(max-width:820px){.wrap{padding:0 24px;}.nav{padding:16px 24px;}.nav.scrolled{padding:12px 24px;}.nav-links{position:fixed;inset:0 0 0 auto;width:min(80vw,340px);height:100vh;flex-direction:column;align-items:flex-start;justify-content:center;gap:8px;background:var(--forest-deep);padding:40px;transform:translateX(100%);transition:transform 0.5s cubic-bezier(0.16,1,0.3,1);}.nav-links.open{transform:translateX(0);}.nav-links a,.nav.scrolled .nav-links a{color:rgba(255,255,255,0.9);font-size:1.05rem;}.nav-cta,.nav.scrolled .nav-cta{border-color:rgba(255,255,255,0.5);color:#fff !important;margin-top:14px;}.nav-toggle{display:block;z-index:110;}.manifesto .cols{grid-template-columns:1fr;gap:30px;}.step{grid-template-columns:1fr;}.step:nth-child(even) .step-media{order:0;}.step-media{min-height:300px;}.step-body{padding:44px 28px;}.q-item{grid-template-columns:44px 1fr;gap:18px;}.q-tag{display:none;}.faces{grid-template-columns:repeat(2,1fr);}.foot .top{grid-template-columns:1fr;gap:34px;}}
+.step-media.fig{background:#fff;}
+.step-media.fig img{object-fit:contain;padding:38px 34px;}
+.datafigs-sec{padding:2vh 0 15vh;background:var(--paper);}
+.datafigs-sec .head{max-width:720px;margin-bottom:16px;}
+.datafigs-sec h2{font-size:clamp(2rem,4.2vw,3.4rem);font-weight:300;color:var(--soil-900);margin-top:28px;}
+.datafigs-sec .head p{color:var(--bark);font-weight:300;max-width:56ch;margin-top:22px;}
+.datafigs{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;margin-top:52px;}
+.datafig{margin:0;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;transition:transform 0.45s cubic-bezier(0.16,1,0.3,1),box-shadow 0.45s ease;}
+.datafig:hover{transform:translateY(-5px);box-shadow:0 16px 34px rgba(31,60,42,0.12);}
+.datafig-wide{grid-column:1 / -1;}
+.datafig-img{background:#fbfaf6;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:26px;}
+.datafig-img img{width:100%;height:auto;max-height:420px;object-fit:contain;transition:transform 1.2s cubic-bezier(0.16,1,0.3,1);}
+.datafig:hover .datafig-img img{transform:scale(1.03);}
+.datafig figcaption{padding:22px 26px 26px;border-top:1px solid var(--line);font-size:0.92rem;font-weight:300;color:var(--bark);line-height:1.6;}
+.df-tag{display:block;font-family:var(--sans);font-weight:600;font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--moss);margin-bottom:10px;}
+@media(max-width:820px){.datafigs{grid-template-columns:1fr;gap:20px;}.datafig-img img{max-height:340px;}}
 @media(prefers-reduced-motion:reduce){*{animation:none !important;}.reveal{opacity:1 !important;transform:none !important;}}
 </style>
 </head>
@@ -242,9 +258,32 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spa
         <div class="step-body"><span class="step-idx">Lab &middot; ii</span><h3>Molecular evidence</h3><p>In the wet lab, tissue and soil become data: DNA and RNA extraction, barcoding, library preparation and sequencing on Illumina and real-time Oxford Nanopore platforms.</p><span class="fine">Genomes &middot; transcriptomes &middot; microbiomes &middot; DNA metabarcoding</span></div>
       </div>
       <div class="step reveal">
-        <div class="step-media"><span class="marker">In silico</span><img src="assets/images/research/integrated.png" alt="Integrated genomics and data workflow"></div>
+        <div class="step-media fig"><span class="marker">In silico</span><img src="assets/images/data/data-ordination.jpg" alt="Community ordination showing soil fauna response to management"></div>
         <div class="step-body"><span class="step-idx">Insight &middot; iii</span><h3>Analysis &amp; meaning</h3><p>On the command line and in code, sequences become structure &mdash; assemblies, phylogenies, population and landscape genomics &mdash; connecting molecular evidence back to living ecosystems and real environmental challenges.</p><span class="fine">Bioinformatics &middot; population genomics &middot; FAIR &amp; open science</span></div>
       </div>
+    </div>
+  </div>
+</section>
+<section class="datafigs-sec">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow reveal">Evidence, visualised</span>
+      <h2 class="reveal" style="--d:.08s">What the data looks like.</h2>
+      <p class="reveal" style="--d:.14s">A glimpse of the analytical outputs behind our papers &mdash; community structure, biodiversity across taxonomic orders, and the workflows that turn raw sequence and literature into knowledge.</p>
+    </div>
+    <div class="datafigs">
+      <figure class="datafig datafig-wide reveal">
+        <div class="datafig-img"><img src="assets/images/data/data-soilfauna.jpg" alt="Total abundance and OTU richness of soil arthropod orders" loading="lazy"></div>
+        <figcaption><span class="df-tag">Soil biodiversity</span>Abundance and molecular (OTU) richness of soil macro- and mesofauna across arthropod orders &mdash; integrating morphological counts with DNA metabarcoding.</figcaption>
+      </figure>
+      <figure class="datafig reveal" style="--d:.08s">
+        <div class="datafig-img"><img src="assets/images/data/data-ordination.jpg" alt="Ordination of community composition under different management" loading="lazy"></div>
+        <figcaption><span class="df-tag">Community ecology</span>Ordination of belowground communities, testing how earthworms and land management reshape composition.</figcaption>
+      </figure>
+      <figure class="datafig reveal" style="--d:.16s">
+        <div class="datafig-img"><img src="assets/images/data/data-workflow.jpg" alt="LLM-assisted knowledge extraction workflow" loading="lazy"></div>
+        <figcaption><span class="df-tag">Methods &amp; AI</span>An LLM-assisted pipeline for mapping soil-fauna evidence from the scientific literature at scale.</figcaption>
+      </figure>
     </div>
   </div>
 </section>
