@@ -6,6 +6,15 @@
 <title>EnGeL — Environmental Genomics Lab | From the field to the genome</title>
 <meta name="description" content="EnGeL — the Environmental Genomics Lab at the University of Coimbra. Interdisciplinary research on soil biodiversity, molecular ecology and the living evidence beneath our feet, from field observation to the genome.">
 <link rel="icon" href="assets/images/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EnGeL — Environmental Genomics Lab">
+<meta property="og:title" content="EnGeL — Environmental Genomics Lab | From the field to the genome">
+<meta property="og:description" content="Interdisciplinary research on soil biodiversity, molecular ecology and environmental genomics at the University of Coimbra — the living evidence beneath our feet.">
+<meta property="og:image" content="https://luiscunhamx.github.io/engel-website/assets/images/og-cover.jpg">
+<meta property="og:url" content="https://luiscunhamx.github.io/engel-website/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@luiscunhamx">
+<meta name="twitter:image" content="https://luiscunhamx.github.io/engel-website/assets/images/og-cover.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -200,6 +209,22 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spa
 .kit-fn{display:block;margin-top:6px;font-size:0.82rem;font-weight:300;color:var(--lichen);line-height:1.5;}
 @media(max-width:1000px){.kit-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:640px){.kit-grid{grid-template-columns:1fr;}.kit-wide .kit-img{aspect-ratio:4/3;}}
+.news-sec{padding:2vh 0 15vh;background:var(--paper);}
+.news-sec .head{max-width:720px;margin-bottom:8px;}
+.news-sec h2{font-size:clamp(2rem,4.2vw,3.4rem);font-weight:300;color:var(--soil-900);margin-top:28px;}
+.news-list{margin-top:44px;border-top:1px solid var(--line);}
+.news-item{display:grid;grid-template-columns:150px 1fr auto;gap:28px;align-items:center;padding:26px 0;border-bottom:1px solid var(--line);transition:padding-left 0.5s cubic-bezier(0.16,1,0.3,1);}
+.news-item:hover{padding-left:14px;}
+.news-date{font-family:var(--sans);font-size:0.74rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--moss);}
+.news-title{display:block;font-family:var(--serif);font-size:1.3rem;font-weight:400;color:var(--soil-900);line-height:1.25;}
+.news-sub{display:block;margin-top:5px;font-size:0.92rem;font-weight:300;color:var(--bark);}
+.news-arrow{width:22px;height:22px;color:var(--clay);transition:transform 0.4s ease,color 0.4s ease;}
+.news-item:hover .news-arrow{transform:translateX(6px);color:var(--forest);}
+.news-item:hover .news-title{color:var(--forest);}
+@media(max-width:640px){.news-item{grid-template-columns:1fr;gap:6px;}.news-arrow{display:none;}.news-date{order:-1;}}
+.foot-follow{display:flex;gap:16px;flex-wrap:wrap;margin-top:18px;}
+.foot-follow a{font-size:0.78rem;letter-spacing:0.04em;color:var(--stone);border:1px solid rgba(185,178,163,0.28);border-radius:100px;padding:5px 14px;transition:color 0.3s ease,border-color 0.3s ease,background 0.3s ease;}
+.foot-follow a:hover{color:var(--forest-deep);background:var(--genome);border-color:var(--genome);}
 @media(prefers-reduced-motion:reduce){*{animation:none !important;}.reveal{opacity:1 !important;transform:none !important;}}
 </style>
 </head>
@@ -213,6 +238,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spa
     <a href="publications.html">Publications</a>
     <a href="research-topics.html">Research Topics</a>
     <a href="wormblog.html">WormBlog</a>
+    <a href="join.html">Join Us</a>
     <a class="nav-cta" href="#collaborate">Collaborate</a>
   </nav>
   <button class="nav-toggle" id="navtoggle" aria-label="Menu"><span></span><span></span></button>
@@ -385,6 +411,32 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spa
     </div>
   </div>
 </section>
+<section class="news-sec">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow reveal">Latest from the lab</span>
+      <h2 class="reveal" style="--d:.08s">Recent field notes, papers and milestones.</h2>
+    </div>
+    <div class="news-list">
+      <a class="news-item reveal" href="wormblog-benchmarks-soil-sampling.html">
+        <span class="news-date">June 2026</span>
+        <span class="news-body"><span class="news-title">Europe-wide soil-health sampling with BENCHMARKS</span><span class="news-sub">Field notes from the Lynx Land landscape campaign &mdash; ~100 locations sampled across Portugal.</span></span>
+        <svg class="news-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="news-item reveal" href="publications.html">
+        <span class="news-date">2026</span>
+        <span class="news-body"><span class="news-title">New papers in Geoderma, Applied Soil Ecology &amp; Soil Ecology Letters</span><span class="news-sub">From LLM-assisted evidence mapping to tropical soil microbiomes and biochar.</span></span>
+        <svg class="news-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="news-item reveal" href="index.html#kit">
+        <span class="news-date">2026</span>
+        <span class="news-body"><span class="news-title">Molecular facility expanded</span><span class="news-sub">Rapid NEXTGENPCR, QuantStudio qPCR and NanoDrop quantification now online.</span></span>
+        <svg class="news-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+    <div class="reveal" style="margin-top:38px;"><a class="tlink" href="wormblog.html">All field notes &amp; news <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  </div>
+</section>
 <section class="cta" id="collaborate">
   <img class="cta-bg" src="assets/images/research/lagoa-do-fogo.jpg" alt="Lagoa do Fogo, Azores">
   <div class="cta-scrim"></div>
@@ -404,8 +456,10 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spa
   <div class="wrap">
     <div class="top">
       <div><div class="mark">EnGeL</div><p>Environmental Genomics Lab &mdash; eWorm Research Group, Centre for Functional Ecology, University of Coimbra.</p></div>
-      <div><h5>Explore</h5><ul><li><a href="about.html">About</a></li><li><a href="research.html">Research</a></li><li><a href="publications.html">Publications</a></li><li><a href="research-topics.html">Research Topics</a></li><li><a href="wormblog.html">WormBlog</a></li></ul></div>
-      <div><h5>Connect</h5><ul><li><a href="mailto:ewormuc@gmail.com">ewormuc@gmail.com</a></li><li><a href="mailto:luis.cunha@uc.pt">luis.cunha@uc.pt</a></li><li><a href="https://cfe.uc.pt/environmental-genomics-lab" target="_blank" rel="noopener">cfe.uc.pt/environmental-genomics-lab</a></li><li>+351 914 419 745</li></ul></div>
+      <div><h5>Explore</h5><ul><li><a href="about.html">About</a></li><li><a href="research.html">Research</a></li><li><a href="publications.html">Publications</a></li><li><a href="research-topics.html">Research Topics</a></li><li><a href="wormblog.html">WormBlog</a></li><li><a href="join.html">Join Us</a></li></ul></div>
+      <div><h5>Connect</h5><ul><li><a href="mailto:ewormuc@gmail.com">ewormuc@gmail.com</a></li><li><a href="mailto:luis.cunha@uc.pt">luis.cunha@uc.pt</a></li><li><a href="https://cfe.uc.pt/environmental-genomics-lab" target="_blank" rel="noopener">cfe.uc.pt/environmental-genomics-lab</a></li><li>+351 914 419 745</li></ul>
+        <div class="foot-follow"><a href="https://x.com/luiscunhamx" target="_blank" rel="noopener">X</a><a href="https://instagram.com/luiscunhamx" target="_blank" rel="noopener">Instagram</a><a href="https://www.linkedin.com/in/luisnevescunha/" target="_blank" rel="noopener">LinkedIn</a><a href="https://orcid.org/0000-0002-5870-2537" target="_blank" rel="noopener">ORCID</a></div>
+      </div>
     </div>
     <div class="bottom"><span>&copy; <span id="yr"></span> EnGeL Research Group &middot; University of Coimbra</span><span>From the field to the genome.</span></div>
   </div>
