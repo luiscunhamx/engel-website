@@ -654,3 +654,74 @@ article.reveal .post-meta { margin-bottom: 28px; }
 
   .blog-card { padding: 18px 18px; }
 }
+
+/* ============ Publications: impact + findings ============ */
+
+.pub-impact { margin-top: 44px; }
+.pub-impact .stats { margin: 0; }
+.pub-venues-note {
+  margin: 30px auto 0;
+  max-width: 760px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #55604f;
+  line-height: 1.7;
+}
+.pub-venues-note em { color: var(--green-dark); font-style: italic; }
+
+.findings { margin-top: 72px; padding-top: 56px; border-top: 1px solid var(--border); }
+.findings h2 { font-size: 1.9rem; }
+.findings-intro {
+  max-width: 60ch;
+  color: #55604f;
+  font-size: 1.05rem;
+  margin: 16px 0 0;
+}
+.finding-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 44px;
+}
+.finding-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 30px 30px 28px;
+  transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s ease;
+  transition-delay: var(--delay, 0s);
+}
+.finding-card:hover { transform: translateY(-5px); box-shadow: 0 14px 30px rgba(31,92,63,0.12); }
+.finding-idx {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--green-light);
+}
+.finding-card h3 {
+  font-size: 1.22rem;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--green-dark);
+  margin: 10px 0 12px;
+  line-height: 1.25;
+}
+.finding-card p { font-size: 0.94rem; color: #4a4f4a; margin: 0; }
+.finding-card p em { font-style: italic; }
+.finding-cite {
+  display: block;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.74rem;
+  letter-spacing: 0.03em;
+  color: var(--green-mid);
+}
+.pub-list-heading { margin-top: 76px; font-size: 1.7rem; }
+
+@media (max-width: 600px) {
+  .pub-venues-note { font-size: 0.9rem; }
+  .finding-grid { grid-template-columns: 1fr; gap: 18px; }
+}
