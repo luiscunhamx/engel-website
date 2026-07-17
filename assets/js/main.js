@@ -4,6 +4,13 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.classList.add("loaded");
   });
 
+  // Respect reduced-motion preference: freeze the hero video on its poster frame
+  var heroVideo = document.querySelector(".hero-bg-video");
+  if (heroVideo && window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    heroVideo.removeAttribute("autoplay");
+    heroVideo.pause();
+  }
+
   // Mobile nav toggle
   var toggle = document.querySelector(".nav-toggle");
   var nav = document.querySelector(".main-nav");
@@ -76,17 +83,4 @@ document.addEventListener("DOMContentLoaded", function () {
       var statsIo = new IntersectionObserver(
         function (entries) {
           entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-              animateCounter(entry.target);
-              statsIo.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.4 }
-      );
-      counters.forEach(function (el) { statsIo.observe(el); });
-    } else {
-      counters.forEach(animateCounter);
-    }
-  }
-});
+            if (ent
