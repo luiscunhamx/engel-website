@@ -97,3 +97,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+window.__engelReady = true;

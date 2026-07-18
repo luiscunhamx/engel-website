@@ -403,7 +403,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spa
       <a class="face reveal" href="team.html"><div class="ph"><img src="assets/images/team/luis_cunha.jpg" alt="Lu&iacute;s Cunha"></div><div class="nm">Lu&iacute;s Cunha</div><div class="rl">Principal Investigator</div></a>
       <a class="face reveal" style="--d:.05s" href="team.html"><div class="ph"><img src="assets/images/team/nadja_den_besten.webp" alt="Nadja den Besten"></div><div class="nm">Nadja den Besten</div><div class="rl">Assistant Researcher</div></a>
       <a class="face reveal" style="--d:.1s" href="team.html"><div class="ph"><img src="assets/images/team/catarina_pinho.jpg" alt="Catarina Pinho"></div><div class="nm">Catarina Pinho</div><div class="rl">Junior Researcher</div></a>
-      <a class="face reveal" style="--d:.15s" href="team.html"><div class="ph"><img src="assets/images/team/filipa_reis.jpg" alt="Filipa Reis"></div><div class="nm">Filipa Reis</div><div class="rl">Researcher</div></a>
+      <a class="face reveal" style="--d:.15s" href="team.html"><div class="ph"><img src="assets/images/team/filipa_reis.jpg" alt="Filipa Reis"></div><div class="nm">Filipa Reis</div><div class="rl">Technician</div></a>
       <a class="face reveal" style="--d:.2s" href="team.html"><div class="ph"><img src="assets/images/team/luisa_fraga.jpg" alt="Lu&iacute;sa Fraga"></div><div class="nm">Lu&iacute;sa Fraga</div><div class="rl">Technician</div></a>
       <a class="face reveal" style="--d:.25s" href="team.html"><div class="ph"><img src="assets/images/team/ricardo_leitao.webp" alt="Ricardo Leit&atilde;o"></div><div class="nm">Ricardo Leit&atilde;o</div><div class="rl">PhD Researcher</div></a>
     </div>
@@ -466,6 +466,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spa
     <div class="bottom"><span>&copy; <span id="yr"></span> EnGeL Research Group &middot; University of Coimbra</span><span>From the field to the genome.</span></div>
   </div>
 </footer>
+<script>setTimeout(function(){if(!window.__engelReady){document.body.style.opacity="1";document.querySelectorAll(".reveal").forEach(function(e){e.classList.add("in");});}},2600);</script>
 <script>
 document.getElementById("yr").textContent = new Date().getFullYear();
 var nav = document.getElementById("nav");
@@ -497,6 +498,7 @@ var heroVideo = document.querySelector(".hero-video");
 if(heroVideo && !window.matchMedia("(prefers-reduced-motion: reduce)").matches){
   window.addEventListener("scroll", function(){ var y = window.scrollY; if(y < window.innerHeight){ heroVideo.style.transform = "translateY(" + (y*0.18) + "px) scale(1.04)"; } }, {passive:true});
 }
+window.__engelReady = true;
 </script>
 </body>
 </html>
