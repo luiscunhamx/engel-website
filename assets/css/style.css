@@ -425,6 +425,8 @@ nav.main-nav a:hover, nav.main-nav a.active { background: none; }
   border-bottom: 1px solid var(--border);
   font-size: 0.98rem;
   line-height: 1.6;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 .pub-list li:first-child, .grants-list li:first-child { padding-top: 0; }
 .pub-year, .grant-years {
@@ -651,10 +653,12 @@ article.reveal .post-meta { margin-bottom: 28px; }
   main { padding: 32px 0 48px; }
   section + section { margin-top: 36px; }
 
-  .stats { gap: 16px; margin: 28px 0; }
-  .stat-num { font-size: 1.8rem; }
+  .stats { grid-template-columns: repeat(2, 1fr); gap: 22px 16px; margin: 28px 0; }
+  .stat-num { font-size: 1.7rem; }
+  .stat-label { font-size: 0.78rem; }
 
   .team-grid, .research-cards { gap: 20px; }
+  .research-cards { grid-template-columns: 1fr; }
   .team-card .body { padding: 16px 16px 18px; }
 
   .alumni-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 24px 14px; }
@@ -663,7 +667,10 @@ article.reveal .post-meta { margin-bottom: 28px; }
 
   .pub-list li, .grants-list li { font-size: 0.92rem; padding: 13px 0; }
 
+  .gallery-grid { grid-template-columns: 1fr; }
+
   .research-card-body { padding: 18px 18px 20px; }
+  .research-card-img { aspect-ratio: 16/9; }
 
   .reveal h1 + section p:first-of-type::first-letter,
   main .wrap > h1.reveal + p::first-letter {
@@ -792,4 +799,20 @@ article.reveal .post-meta { margin-bottom: 28px; }
 .footer-social { display: flex; gap: 16px; flex-wrap: wrap; }
 .footer-social a {
   font-family: "Helvetica Neue", Arial, sans-serif;
-  
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  color: #cfe3d6;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+.footer-social a:hover { color: #fff; border-color: rgba(255,255,255,0.6); text-decoration: none; }
+
+.alumni-now {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.74rem;
+  color: var(--green-mid);
+  margin-top: 6px;
+  line-height: 1.4;
+}
+.alumni-now strong { font-weight: 600; color: var(--green-dark); }
