@@ -816,3 +816,13 @@ article.reveal .post-meta { margin-bottom: 28px; }
   line-height: 1.4;
 }
 .alumni-now strong { font-weight: 600; color: var(--green-dark); }
+
+/* MSc topics */
+.msc-link { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 24px; background: var(--green-dark); color: #fff; padding: 20px 24px; border-radius: 6px; margin: 0 0 32px; }
+.msc-link strong { font-size: 1.15rem; }
+.msc-link:hover { background: var(--green-mid); color: #fff; text-decoration: none; }
+.topic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin: 32px 0; }
+.topic-card { background: var(--paper-alt); border: 1px solid var(--border); border-radius: 6px; padding: 24px; }
+.topic-card h2 { margin-top: 4px; font-size: 1.35rem; }
+.topic-num { font-family: var(--font-display); font-style: italic; color: var(--green-mid); }
+.topic-tags { font-size: 0.9rem; color: var(--green-dark); font-weight: 600; margin-bottom: 0; }
