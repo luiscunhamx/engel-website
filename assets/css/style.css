@@ -821,8 +821,11 @@ article.reveal .post-meta { margin-bottom: 28px; }
 .msc-link { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 24px; background: var(--green-dark); color: #fff; padding: 20px 24px; border-radius: 6px; margin: 0 0 32px; }
 .msc-link strong { font-size: 1.15rem; }
 .msc-link:hover { background: var(--green-mid); color: #fff; text-decoration: none; }
-.topic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin: 32px 0; }
+.topic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 24px; margin: 32px 0; }
 .topic-card { background: var(--paper-alt); border: 1px solid var(--border); border-radius: 6px; padding: 24px; }
 .topic-card h2 { margin-top: 4px; font-size: 1.35rem; }
 .topic-num { font-family: var(--font-display); font-style: italic; color: var(--green-mid); }
 .topic-tags { font-size: 0.9rem; color: var(--green-dark); font-weight: 600; margin-bottom: 0; }
+.topic-card { overflow: hidden; }
+.topic-media { display: block; max-width: none; width: calc(100% + 48px); height: 240px; object-fit: cover; margin: -24px -24px 0; }
+.topic-credit { font-size: 0.75rem; color: #6b7a6b; margin: 6px 0 12px; }
