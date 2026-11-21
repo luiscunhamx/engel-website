@@ -829,3 +829,17 @@ article.reveal .post-meta { margin-bottom: 28px; }
 .topic-card { overflow: hidden; }
 .topic-media { display: block; max-width: none; width: calc(100% + 48px); height: 240px; object-fit: cover; margin: -24px -24px 0; }
 .topic-credit { font-size: 0.75rem; color: #6b7a6b; margin: 6px 0 12px; }
+
+/* Footer (shared by all inner pages) */
+.site-footer { padding: 56px 0 26px; font-family: inherit; font-size: 0.92rem; color: rgba(255,255,255,0.82); }
+.site-footer .wrap.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 36px; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,0.16); }
+.footer-mark { font-family: var(--font-display); font-size: 1.5rem; color: #fff; }
+.footer-id p { margin: 12px 0 18px; max-width: 36ch; color: rgba(255,255,255,0.75); }
+.site-footer h5 { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin: 0 0 14px; }
+.site-footer ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.site-footer ul a { color: rgba(255,255,255,0.88); }
+.site-footer ul a:hover { color: #fff; }
+.footer-insta { display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; border: 1px solid rgba(255,255,255,0.35); border-radius: 100px; padding: 7px 16px; color: #fff; }
+.footer-insta:hover { background: #fff; color: var(--green-dark); text-decoration: none; }
+.site-footer .wrap.footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding-top: 20px; font-size: 0.8rem; color: rgba(255,255,255,0.62); }
+@media (max-width: 760px) { .site-footer .wrap.footer-grid { grid-template-columns: 1fr; gap: 28px; } }
