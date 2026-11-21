@@ -76,7 +76,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spa
 .nav.scrolled .nav-toggle span{background:var(--forest-deep);}
 .hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden;isolation:isolate;color:#fff;}
 .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-3;}
-.hero-scrim{position:absolute;inset:0;z-index:-2;background:linear-gradient(180deg,rgba(20,28,22,0.55) 0%,rgba(20,28,22,0.15) 32%,rgba(18,24,18,0.55) 78%,rgba(15,20,15,0.9) 100%),radial-gradient(120% 90% at 20% 20%,rgba(20,55,38,0.35),transparent 60%);}
+.hero-scrim{position:absolute;inset:0;z-index:-2;background:linear-gradient(180deg,rgba(20,28,22,0.55) 0%,rgba(20,28,22,0.28) 32%,rgba(18,24,18,0.55) 78%,rgba(15,20,15,0.9) 100%),radial-gradient(120% 90% at 20% 20%,rgba(20,55,38,0.35),transparent 60%);}
 .hero-grain{position:absolute;inset:0;z-index:-1;opacity:0.5;mix-blend-mode:overlay;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");}
 .hero-inner{padding-bottom:9vh;padding-top:120px;width:100%;}
 .hero .eyebrow{margin-bottom:34px;}
@@ -177,7 +177,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spa
 .foot ul a:hover{color:var(--genome);}
 .foot .bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;padding-top:28px;font-size:0.8rem;color:var(--mineral);}
 @media(max-width:1000px){.faces{grid-template-columns:repeat(4,1fr);}.projects{grid-template-columns:1fr;}.stat-row{grid-template-columns:repeat(2,1fr);gap:40px 30px;}}
-@media(max-width:820px){.wrap{padding:0 24px;}.nav{padding:16px 24px;}.nav.scrolled{padding:12px 24px;}.nav-links{position:fixed;inset:0 0 0 auto;width:min(80vw,340px);height:100vh;flex-direction:column;align-items:flex-start;justify-content:center;gap:8px;background:var(--forest-deep);padding:40px;transform:translateX(100%);transition:transform 0.5s cubic-bezier(0.16,1,0.3,1);}.nav-links.open{transform:translateX(0);}.nav-links a,.nav.scrolled .nav-links a{color:rgba(255,255,255,0.9);font-size:1.05rem;}.nav-cta,.nav.scrolled .nav-cta{border-color:rgba(255,255,255,0.5);color:#fff !important;margin-top:14px;}.nav-toggle{display:block;z-index:110;}.manifesto .cols{grid-template-columns:1fr;gap:30px;}.step{grid-template-columns:1fr;}.step:nth-child(even) .step-media{order:0;}.step-media{min-height:300px;}.step-body{padding:44px 28px;}.q-item{grid-template-columns:44px 1fr;gap:18px;}.q-tag{display:none;}.faces{grid-template-columns:repeat(2,1fr);}.foot .top{grid-template-columns:1fr;gap:34px;}}
+@media(max-width:820px){.wrap{padding:0 24px;}.nav{padding:16px 24px;}.nav.scrolled{padding:12px 24px;}.nav-links{position:fixed;inset:0 0 0 auto;width:min(80vw,340px);height:100vh;flex-direction:column;align-items:flex-start;justify-content:center;gap:8px;background:var(--forest-deep);padding:40px;transform:translateX(100%);visibility:hidden;transition:transform 0.5s cubic-bezier(0.16,1,0.3,1),visibility 0s linear 0.5s;}.nav-links.open{transform:translateX(0);visibility:visible;transition-delay:0s;}.nav-links a,.nav.scrolled .nav-links a{color:rgba(255,255,255,0.9);font-size:1.05rem;}.nav-cta,.nav.scrolled .nav-cta{border-color:rgba(255,255,255,0.5);color:#fff !important;margin-top:14px;}.nav-toggle{display:block;z-index:110;}.manifesto .cols{grid-template-columns:1fr;gap:30px;}.step{grid-template-columns:1fr;}.step:nth-child(even) .step-media{order:0;}.step-media{min-height:300px;}.step-body{padding:44px 28px;}.q-item{grid-template-columns:44px 1fr;gap:18px;}.q-tag{display:none;}.faces{grid-template-columns:repeat(2,1fr);}.foot .top{grid-template-columns:1fr;gap:34px;}}
 .step-media.fig{background:#fff;}
 .step-media.fig img{object-fit:contain;padding:38px 34px;}
 .datafigs-sec{padding:2vh 0 15vh;background:var(--paper);}
@@ -229,9 +229,20 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spa
 .foot-follow a{font-size:0.78rem;letter-spacing:0.04em;color:var(--stone);border:1px solid rgba(185,178,163,0.28);border-radius:100px;padding:5px 14px;transition:color 0.3s ease,border-color 0.3s ease,background 0.3s ease;}
 .foot-follow a:hover{color:var(--forest-deep);background:var(--genome);border-color:var(--genome);}
 @media(prefers-reduced-motion:reduce){*{animation:none !important;}.reveal{opacity:1 !important;transform:none !important;}}
+.skip-link{position:absolute;left:12px;top:-64px;z-index:300;background:var(--genome);color:var(--forest-deep);font-weight:600;font-size:0.9rem;padding:12px 18px;border-radius:6px;transition:top 0.2s ease;}
+.skip-link:focus{top:12px;}
+:focus-visible{outline:3px solid var(--forest);outline-offset:3px;}
+.nav:not(.scrolled) :focus-visible,.hero :focus-visible,.questions :focus-visible,.kit :focus-visible,.relevance :focus-visible,.cta :focus-visible,.foot :focus-visible{outline-color:var(--genome);}
+@media(max-width:820px){.nav-links :focus-visible{outline-color:var(--genome);}}
+.nav-toggle{min-width:44px;min-height:44px;}
+.hero .eyebrow.on-dark{color:#eef3e4;text-shadow:0 1px 10px rgba(10,16,12,0.7);}
+.hero-pause{display:inline-flex;align-items:center;gap:10px;background:rgba(20,28,22,0.45);border:1px solid rgba(255,255,255,0.45);color:#fff;font-family:var(--sans);font-size:0.78rem;letter-spacing:0.08em;padding:10px 18px;min-height:44px;border-radius:100px;cursor:pointer;transition:background 0.3s ease;}
+.hero-pause:hover{background:rgba(20,28,22,0.7);}
+.hero-pause svg{width:14px;height:14px;}
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <header class="nav" id="nav">
   <a class="nav-brand" href="index.html"><img class="logo" src="assets/images/logo.png" alt="EnGeL"></a>
   <nav class="nav-links" id="navlinks">
@@ -245,10 +256,11 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spa
     <a href="join.html">Join Us</a>
     <a class="nav-cta" href="#collaborate">Collaborate</a>
   </nav>
-  <button class="nav-toggle" id="navtoggle" aria-label="Menu"><span></span><span></span></button>
+  <button class="nav-toggle" id="navtoggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks"><span></span><span></span></button>
 </header>
+<main id="main">
 <section class="hero">
-  <video class="hero-video" autoplay muted loop playsinline poster="assets/images/gallery/hero-poster.jpg">
+  <video class="hero-video" aria-hidden="true" autoplay muted loop playsinline poster="assets/images/gallery/hero-poster.jpg">
     <source src="assets/video/hero-amazon.mp4" type="video/mp4">
   </video>
   <div class="hero-scrim"></div>
@@ -261,6 +273,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spa
       <a class="btn-primary" href="#questions">Enter the investigation
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <span class="hero-scroll"><span class="line"></span>Scroll</span>
+      <button class="hero-pause" id="herovid" type="button"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg><span>Pause video</span></button>
     </div>
   </div>
 </section>
@@ -383,10 +396,10 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spa
       <p class="reveal" style="--d:.14s">Our science feeds European soil monitoring, sustainable agriculture and biodiversity conservation, built across three decades of funded, collaborative research.</p>
     </div>
     <div class="stat-row">
-      <div class="stat reveal"><div class="num" data-target="34" data-suffix="">0</div><div class="lab">Projects &amp; grants, 2010&ndash;2030</div></div>
-      <div class="stat reveal" style="--d:.08s"><div class="num" data-target="6.6" data-suffix="M&euro;+">0</div><div class="lab">Secured as Principal Investigator</div></div>
-      <div class="stat reveal" style="--d:.16s"><div class="num" data-target="12" data-suffix="M&euro;">0</div><div class="lab">Led as WP Coordinator, BENCHMARKS</div></div>
-      <div class="stat reveal" style="--d:.24s"><div class="num" data-target="43" data-suffix="M&euro;+">0</div><div class="lab">Total portfolio value, all roles</div></div>
+      <div class="stat reveal"><div class="num" data-target="34" data-suffix="">34</div><div class="lab">Projects &amp; grants, 2010&ndash;2030</div></div>
+      <div class="stat reveal" style="--d:.08s"><div class="num" data-target="6.6" data-suffix="M&euro;+">6.6M&euro;+</div><div class="lab">Secured as Principal Investigator</div></div>
+      <div class="stat reveal" style="--d:.16s"><div class="num" data-target="12" data-suffix="M&euro;">12M&euro;</div><div class="lab">Led as WP Coordinator, BENCHMARKS</div></div>
+      <div class="stat reveal" style="--d:.24s"><div class="num" data-target="43" data-suffix="M&euro;+">43M&euro;+</div><div class="lab">Total portfolio value, all roles</div></div>
     </div>
     <div class="projects">
       <div class="proj reveal"><span class="yr">2027&ndash;2030</span><h4>HidroDataCube4EU</h4><p>Building open, high-resolution soil-hydrology data infrastructure for Europe under the EU Soil Mission.</p><div class="role"><span>Horizon Europe</span><span><b>PI at UC</b></span></div></div>
@@ -457,6 +470,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spa
     </div>
   </div>
 </section>
+</main>
 <footer class="foot">
   <div class="wrap">
     <div class="top">
@@ -477,14 +491,17 @@ function onScroll(){ nav.classList.toggle("scrolled", window.scrollY > 40); }
 window.addEventListener("scroll", onScroll, {passive:true}); onScroll();
 var toggle = document.getElementById("navtoggle");
 var links = document.getElementById("navlinks");
-toggle.addEventListener("click", function(){ links.classList.toggle("open"); });
-links.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ links.classList.remove("open"); }); });
+function setMenu(open){ links.classList.toggle("open", open); toggle.setAttribute("aria-expanded", open ? "true" : "false"); }
+toggle.addEventListener("click", function(){ setMenu(!links.classList.contains("open")); });
+links.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ setMenu(false); }); });
+document.addEventListener("keydown", function(e){ if(e.key === "Escape" && links.classList.contains("open")){ setMenu(false); toggle.focus(); } });
 var revEls = document.querySelectorAll(".reveal");
 if("IntersectionObserver" in window){
   var io = new IntersectionObserver(function(entries){ entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }); }, {threshold:0, rootMargin:"0px 0px -60px 0px"});
   revEls.forEach(function(el){ io.observe(el); });
 } else { revEls.forEach(function(el){ el.classList.add("in"); }); }
 function animateNum(el){
+  if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){ return; }
   var target = parseFloat(el.getAttribute("data-target"));
   var suffix = el.getAttribute("data-suffix") || "";
   var decimals = (target % 1 !== 0) ? 1 : 0;
@@ -500,6 +517,18 @@ if("IntersectionObserver" in window){
 var heroVideo = document.querySelector(".hero-video");
 if(heroVideo && !window.matchMedia("(prefers-reduced-motion: reduce)").matches){
   window.addEventListener("scroll", function(){ var y = window.scrollY; if(y < window.innerHeight){ heroVideo.style.transform = "translateY(" + (y*0.18) + "px) scale(1.04)"; } }, {passive:true});
+}
+var pauseBtn = document.getElementById("herovid");
+if(heroVideo && pauseBtn){
+  var ICON_PAUSE = "M7 5h4v14H7zM13 5h4v14h-4z", ICON_PLAY = "M8 5v14l11-7z";
+  var setVideo = function(play){
+    if(play){ var pr = heroVideo.play(); if(pr && pr.catch){ pr.catch(function(){ setVideo(false); }); } } else { heroVideo.pause(); }
+    pauseBtn.querySelector("span").textContent = play ? "Pause video" : "Play video";
+    pauseBtn.querySelector("path").setAttribute("d", play ? ICON_PAUSE : ICON_PLAY);
+  };
+  var saveData = navigator.connection && navigator.connection.saveData;
+  if(window.matchMedia("(prefers-reduced-motion: reduce)").matches || saveData){ setVideo(false); }
+  pauseBtn.addEventListener("click", function(){ setVideo(heroVideo.paused); });
 }
 window.__engelReady = true;
 </script>
