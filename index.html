@@ -210,6 +210,12 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spa
 .kit-card figcaption{padding:18px 20px 20px;}
 .kit-name{display:block;font-family:var(--serif);font-size:1.15rem;color:#fff;line-height:1.2;}
 .kit-fn{display:block;margin-top:6px;font-size:0.82rem;font-weight:300;color:var(--lichen);line-height:1.5;}
+.kit-groups{margin-top:44px;position:relative;border-top:1px solid rgba(194,208,173,0.18);padding-top:28px;}
+.kit-groups h3{font-family:var(--serif);font-weight:400;font-size:1.25rem;color:#fff;}
+.kit-groups ul{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:18px 32px;}
+.kit-groups li b{display:block;color:var(--genome);font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;font-weight:500;}
+.kit-groups li span{display:block;margin-top:4px;font-size:0.92rem;font-weight:300;color:var(--lichen);line-height:1.5;}
+@media(max-width:640px){.kit-groups ul{grid-template-columns:1fr;}}
 @media(max-width:1000px){.kit-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:640px){.kit-grid{grid-template-columns:1fr;}.kit-wide .kit-img{aspect-ratio:4/3;}}
 .news-sec{padding:2vh 0 15vh;background:var(--paper);}
@@ -358,7 +364,7 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spa
     <div class="kit-grid">
       <figure class="kit-card kit-wide reveal">
         <div class="kit-img"><img src="assets/images/equipment/thermalcyclers.jpg" alt="Bank of PCR thermal cyclers" loading="lazy"></div>
-        <figcaption><span class="kit-name">PCR thermal-cycler array</span><span class="kit-fn">Bio-Rad T100 &amp; Analytik Jena Biometra TOne &mdash; parallel amplification at scale</span></figcaption>
+        <figcaption><span class="kit-name">PCR thermal-cycler array</span><span class="kit-fn">Four thermal cyclers (three Analytik Jena Biometra TOne and one Bio-Rad T100) &mdash; parallel amplification at scale</span></figcaption>
       </figure>
       <figure class="kit-card reveal" style="--d:.06s">
         <div class="kit-img"><img src="assets/images/equipment/qpcr.jpg" alt="Applied Biosystems QuantStudio 3" loading="lazy"></div>
@@ -385,7 +391,16 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spa
         <figcaption><span class="kit-name">Leica M125 C</span><span class="kit-fn">Stereo microscopy &amp; specimen imaging</span></figcaption>
       </figure>
     </div>
-    <p class="reveal" style="margin-top:40px;position:relative;color:var(--lichen);font-weight:300;">All our instruments, the protocols that use them and how to book them: <a href="https://luiscunhamx.github.io/EnGeL-Repository/handbook/equipment/" style="color:#fff;text-decoration:underline;">see the full equipment list in the lab handbook &rarr;</a></p>
+    <div class="kit-groups reveal">
+      <h3>Beyond the bench photos</h3>
+      <ul>
+        <li><b>Extraction &amp; automation</b><span>InviGenius extraction robot, Opentrons OT-2 liquid handler, Oxford Nanopore VolTRAX</span></li>
+        <li><b>Quality control</b><span>Agilent TapeStation 4150, Qubit 4 fluorometer</span></li>
+        <li><b>Sequencing</b><span>Oxford Nanopore MinION Mk1C and Mk2, for in-house long-read sequencing</span></li>
+        <li><b>Bioinformatics</b><span>Multicore bioinformatics workstations</span></li>
+      </ul>
+    </div>
+    <p class="reveal" style="margin-top:40px;position:relative;color:var(--lichen);font-weight:300;">The full equipment list and the protocols that use it: <a href="https://luiscunhamx.github.io/EnGeL-Repository/handbook/equipment/" style="color:#fff;text-decoration:underline;">see the equipment page in the lab handbook &rarr;</a></p>
   </div>
 </section>
 <section class="relevance">
