@@ -438,6 +438,8 @@ nav.main-nav a:hover, nav.main-nav a.active { background: none; }
 }
 .pub-authors { color: var(--ink); }
 .pub-authors strong { color: var(--green-dark); }
+strong.engel { font-weight: 700; color: var(--green-mid); }
+.engel-legend { font-size: 0.9rem; color: var(--text-muted, #666); margin: 4px 0 18px; }
 .pub-venue { font-style: italic; color: #55604f; }
 .grants-list .grant-role { color: #6b716b; font-size: 0.88rem; }
 .grants-list .grant-funder { color: #55604f; }
